@@ -32,7 +32,7 @@ Um comportamento inteligente e aprimorado ao colar (`Ctrl + V`) quando o modo de
 
 ## Requisitos
 
-- Visual Studio Code versão 1.134.0 ou superior.
+- Visual Studio Code versão 1.100.0 ou superior.
 
 ## Notas de Lançamento (Release Notes)
 
