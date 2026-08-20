@@ -1,21 +1,46 @@
 {
-  "name": "mode-column",
-  "displayName": "mode column",
-  "description": "Extenção para utilizar o mesmo comando do progrmaa auto-edit",
+  "name": "modeColumn",
+  "displayName": "Mode Column",
+  "description": "Facilita o uso da Seleção de Coluna e melhora o comportamento ao colar textos (Column Paste).",
   "version": "0.0.1",
+  "icon": "icon.jpg",
+  "publisher": "aincrad",
+  "author": {
+    "name": "Alyson Ronnan Martins",
+    "email": "devalyson@gmail.com",
+    "url": "https://github.com/devalyson"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlysonDEV/modeColumn.git"
+  },
   "engines": {
-    "vscode": "^1.134.0"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "mode-column.helloWorld",
-        "title": "Hello World"
+        "command": "modeColumn.toggle",
+        "title": "Alternar Modo Coluna"
+      },
+      {
+        "command": "modeColumn.columnpasteautofilled",
+        "title": "Colar em Coluna (Auto-filled)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "modeColumn.columnpasteautofilled",
+        "key": "ctrl+v",
+        "mac": "cmd+v",
+        "when": "editorTextFocus && config.editor.columnSelection"
       }
     ]
   },
@@ -28,7 +53,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.134.0",
+    "@types/vscode": "^1.100.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
     "typescript-eslint": "^8.61.1",
