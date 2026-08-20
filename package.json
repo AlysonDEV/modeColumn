@@ -1,21 +1,34 @@
 {
   "name": "modeColumn",
   "displayName": "Mode Column",
-  "description": "Extenção para utilizar o mesmo comando do progrmaa auto-edit",
+  "description": "Facilita o uso da Seleção de Coluna e melhora o comportamento ao colar textos (Column Paste).",
   "version": "0.0.1",
+  "icon": "icon.jpg",
+  "publisher": "aincrad",
+  "author": {
+    "name": "Alyson Ronnan Martins",
+    "email": "devalyson@gmail.com",
+    "url": "https://github.com/devalyson"
+  },
   "engines": {
     "vscode": "^1.134.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "modeColumn.toggle",
         "title": "Alternar Modo Coluna"
+      },
+      {
+        "command": "modeColumn.columnpasteautofilled",
+        "title": "Colar em Coluna (Auto-filled)"
       }
     ],
     "keybindings": [
