@@ -1,6 +1,6 @@
 {
-  "name": "mode-column",
-  "displayName": "mode column",
+  "name": "modeColumn",
+  "displayName": "Mode Column",
   "description": "Extenção para utilizar o mesmo comando do progrmaa auto-edit",
   "version": "0.0.1",
   "engines": {
@@ -14,8 +14,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "mode-column.helloWorld",
-        "title": "Hello World"
+        "command": "modeColumn.toggle",
+        "title": "Alternar Modo Coluna"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "modeColumn.columnpasteautofilled",
+        "key": "ctrl+v",
+        "mac": "cmd+v",
+        "when": "editorTextFocus && config.editor.columnSelection"
       }
     ]
   },
